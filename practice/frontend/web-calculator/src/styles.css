@@ -1,0 +1,103 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --error: #fca5a5;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(900px, 92vw);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button {
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #0b1220;
+  font-weight: 600;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.result {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  margin-top: 0.6rem;
+  color: var(--error);
+  min-height: 1.2rem;
+}
+
+.history {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.history li {
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--border);
+  color: var(--muted);
+}
